@@ -1,0 +1,14 @@
+.navbar-brand {
+    width: 75px;
+    height: 79px;
+    background: transparent  url(../img/senselab_2.jpg) no-repeat;
+}
+
+#wrap {
+    margin: 50px 5px;
+}
+
+.navbar-inverse {   
+    background: #000000;
+}
+
