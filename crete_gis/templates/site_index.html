@@ -4,15 +4,17 @@
 {% comment %}
 This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs. 
 {% endcomment %}
+  <div class="container">
   {% block hero %}
   <div class="jumbotron">
     <div class="container">
       <h1>{% trans "Crete-GIS project" %}</h1>
       <div class="hero-unit-content"/>
       <img src = '../static/img/crete_sat.jpg' height = '449' width = '953'>
- 
+
       <p>{% blocktrans %}<b>Τo Crete-GIS είναι ένα GeoPortal γεωχωρικών δεδομένων που αφορά την περιοχή της Κρήτης.<br>Σκοπός του είναι ο διαμοιρασμός, η ελεύθερη πρόσβαση και η επεξεργασία γεωχωρικών<br>και γεωγραφικών δεδομένων για τους πολίτες και τους κυβερνητικούς φορείς </b> {% endblocktrans %}</p>
     </div>
   </div>
   {% endblock %}
  </div>
+~       
