@@ -1,14 +1,17 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block extra_head %}
       <link href="{{ STATIC_URL }}css/site_base.css" rel="stylesheet"/>
       <title>{% block title %}Crete-GIS{% endblock %}</title>
 
 {% endblock %}
 {% block extra_tab %}
-{% comment %}
-Add Tab for Third Party Apps
-<li>
- <a href="{{ PROJECT_ROOT }}app">App</a>
+<li id="nav_webgis">
+<a href="{% url "new_map" %}">{% trans "WebGIS" %}</a>
 </li>
-{% endcomment %}
+
 {% endblock %}
+
+~                                                                                                    
+~                                                                                                    
+~                           
