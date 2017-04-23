@@ -32,7 +32,7 @@ SITENAME = 'crete_gis'
 LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 WSGI_APPLICATION = "crete_gis.wsgi.application"
-REGISTRATION_OPEN = True
+#REGISTRATION_OPEN = True
 
 # Load more settings from a file called local_settings.py if it exists
 try:
@@ -59,3 +59,4 @@ LOCALE_PATHS = (
     os.path.join(LOCAL_ROOT, 'locale'),
     ) + LOCALE_PATHS
 
+DEBUG = False

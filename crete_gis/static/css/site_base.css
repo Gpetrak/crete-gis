@@ -1,11 +1,21 @@
 .navbar-brand {
-    width: 75px;
-    height: 79px;
-    background: transparent  url(../img/senselab_2.jpg) no-repeat;
+    width: 40px;
+    height: 35px;
+    background: transparent  url(../img/senselab_3.jpg) no-repeat;
 }
 
+.jumbotron {
+    background: #028baf none repeat scroll 0 0;
+}
 #wrap {
-    margin: 50px 5px;
+    background: #fff none repeat scroll 0 0;
+}
+
+footer {
+    background: #333 none repeat scroll 0 0;
+    color: #fff;
+    padding-bottom: 3em;
+    padding-top: 2em;
 }
 
 .navbar-inverse {   

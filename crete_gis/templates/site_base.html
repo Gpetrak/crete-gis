@@ -1,14 +1,83 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block extra_head %}
       <link href="{{ STATIC_URL }}css/site_base.css" rel="stylesheet"/>
       <title>{% block title %}Crete-GIS{% endblock %}</title>
 
 {% endblock %}
 {% block extra_tab %}
-{% comment %}
-Add Tab for Third Party Apps
-<li>
- <a href="{{ PROJECT_ROOT }}app">App</a>
+<li id="nav_webgis">
+<a href="{% url "new_map" %}">{% trans "WebGIS" %}</a>
 </li>
-{% endcomment %}
+
 {% endblock %}
+
+{% block footer %} 
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<ul class="list-unstyled">
+				    <li>Data</li>
+	                <li><a href="{% url "layer_browse" %}">{% trans "Layers" %}</a></li>
+	                <li><a href="{% url "document_browse" %}">{% trans "Documents" %}</a></li>
+				    {% if user.is_authenticated %}
+	                <li><a href="{% url "services" %}">{% trans "Remote Services" %}</a></li>
+	                <li><a href="/layers/upload">Upload Layer</a></li>
+	                <li><a href="/documents/upload/">Upload Document</a></li>
+	                <li><a href="/services/register/">{% trans "Add Remote Services" %}</a></li>
+				    {% endif %}
+			    </ul>
+			</div>
+			<div class="col-md-2">
+				<ul class="list-unstyled">
+				    <li>Maps</li>
+                    <li><a href="{% url "maps_browse" %}">{% trans "Explore" %}</a></li>
+					{% if user.is_authenticated %}
+					<li><a href="#">{% trans "Create Map" %}</a></li>
+					{% endif %}
+				</ul>
+			</div>
+			<div class="col-md-2">
+				<ul class="list-unstyled">
+				    <li>About</li>
+					<li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
+					<li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
+	                {% if perms.announcements.can_manage %}
+	                <li><a href="{% url "announcements_list" %}">{% trans "Announcements" %}</a></li>
+	                {% endif %}
+					{% if user.is_superuser %}
+				    <li role="separator" class="divider"></li>
+					<li><a href="/admin/people/profile/add/">{% trans "Add User" %}</a></li>
+					<li><a href="{% url "account_invite_user" %}">{% trans "Invite User" %}</a></li>
+					<li><a href="/groups/create/">{% trans "Create Group" %}</a></li>
+					{% endif %}
+				</ul>
+			</div>
+			<div class="col-md-2"></div>
+			<div class="col-md-4 text-right">
+				<p><img src="../static/img/senselab_3.jpg"></p>
+				<ul class="list-unstyled">
+					<li>SenseLab Team</li>
+                                        <li><a href="http://senselab.tuc.gr">senselab.tuc.gr</a></li>
+					<li>Powered by GeoNode</li>
+				</ul>
+	            <label class="hidden">{% trans "Language" %}</label>
+	            {% if csrf_token != "NOTPROVIDED" %}
+	            {% get_current_language as LANGUAGE %}
+	            <form class="form-inline" action="/i18n/setlang/" method="post">
+	            {% csrf_token %}
+	              <select class="select-language" name="language" onchange="javascript:form.submit()">
+	                {% for lang in LANGUAGES %}
+	                <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+	                  {{ lang.1 }}
+	                </option>
+	                {% endfor %}
+	              </select>
+	            </form>
+	            {% endif %}
+			</div>
+		</div>
+	</div>
+</footer>
+{% endblock footer %}
