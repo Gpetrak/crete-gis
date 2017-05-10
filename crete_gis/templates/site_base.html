@@ -6,10 +6,28 @@
 
 {% endblock %}
 {% block extra_tab %}
-<li id="nav_webgis">
-<a href="{% url "new_map" %}">{% trans "WebGIS" %}</a>
+<li id="nav_nomoi" class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    {% trans "Διευθύνσεις" %}
+    <i class="caret"></i>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="/layers/?limit=100&offset=0&regions__name__in=heraklion"><{% trans "ΠΕ Ηρακλείου" %}</a></li>
+    <li><a href="/layers/?limit=100&offset=0&regions__name__in=chania"><{% trans "ΠΕ Χανίων" %}</a></li>
+    <li><a href="/layers/?limit=100&offset=0&regions__name__in=rethymno"><{% trans "ΠΕ Ρεθύμνης" %}</a></li>
+    <li><a href="/layers/?limit=100&offset=0&regions__name__in=lasithi"><{% trans "ΠΕ Λασιθίου" %}</a></li>
+  </ul>
 </li>
 
+<li id="nav_polites" class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    {% trans "Πολίτες" %}
+    <i class="caret"></i>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="{% url "new_map" %}"><{% trans "Χάρτες" %}</a></li>
+  </ul>
+</li>
 {% endblock %}
 
 {% block footer %} 
