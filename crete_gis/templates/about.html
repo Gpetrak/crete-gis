@@ -1,0 +1,33 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "About Crete-GIS" %} — {{ block.super }} {% endblock %}
+
+{% block body_outer %}
+<div class="page-header">
+  <h2>{% trans "Σχετικά με το Crete-GIS" %}</h2>
+</div>
+<p class="lead">{% trans "Σχετικά με το Crete-GIS." %}</p>
+
+ <div class="row">
+    <div class="col-sm-8">
+    <p>
+Το Crete-GIS είναι ένα σύστημα γεωχωρικών δεδομένων το οποίο δημιουργήθηκε με πρωτοβουλία της Περιφέρειας Κρήτης σε συνεργασία με το εργαστήριο SenseLab του Πολυτεχνείου Κρήτης.
+</p>
+<p>
+Τα δεδομένα που δημοσιεύθηκαν προέρχονται από όλες τις Περιφερειακές Ενότητες της Περιφέρειας Κρήτης δηλαδή την ΠΕ Ηρακλείου, ΠΕ Χανίων, ΠΕ Ρεθύμνης και ΠΕ Λασιθίου.
+<p>
+Ο χρήστης έχει την δυνατότητα να αναζητήσει και να προβάλλει γεωχωρικά δεδομένα αλλά και να δημιουργήσει τους δικούς του χάρτες τους οποίους μπορεί να αποθηκεύσει ή και να εκτυπώσει.
+</p>
+<p>
+Οι πιστοποιημένοι χρήστες έχουν τη δυνατότητα να εισάγουν δεδομένα, να τα τροποποιούν αλλά και να αναπτύσσουν διαδικτυακές ομάδες επικοινωνώντας μεταξύ τους μέσω μηνυμάτων ή ειδοποιήσεων μέσα από το σύστημα του Crete-GIS. 
+</p>
+  </div>
+    <div class="col-sm-4">
+    <img src="../static/img/perifereia_logo.jpg" class="img-thumbnail" alt="senselab" width="304" height="236">
+    <img src="../static/img/tuc.jpg" class="img-thumbnail" alt="tuc" width="150" height="150">
+    <img src="../static/img/senselab_img.jpg" class="img-thumbnail" alt="senselab" width="304" height="236">
+</div>
+  </div>
+
+{% endblock %}
