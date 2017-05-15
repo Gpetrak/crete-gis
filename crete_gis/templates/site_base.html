@@ -21,49 +21,53 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             {% block tabs %}
-            <li id="nav_layers">
-              <a href="{% url "layer_browse" %}">{% trans "Δεδομένα" %}</a>
-            </li>
-            <li id="nav_maps">
-              <a href="{% url "maps_browse" %}">{% trans "Χάρτες" %}</a>
-            </li>
-            <li id="nav_documents">
-              <a href="{% url "document_browse" %}">{% trans "Έγγραφα" %}</a>
-            </li>
+            <li id="nav_data">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              {% trans "Δεδομένα" %}
+              <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url "layer_browse" %}">{% trans "Επιφάνειες" %}</a></li>
+              <li><a href="{% url "document_browse" %}">{% trans "Έγγραφα" %}</a></li>
+            </ul>
+          </li>
+          <li id="nav_maps">
+            <a href="{% url "maps_browse" %}">{% trans "Χάρτες" %}</a>
+          </li>
         <!--    <li id="nav_people">
               <a href="{% url "profile_browse" %}">{% trans "People" %}</a>
             <li id="nav_groups">
               <a href="{% url "group_list" %}">{% trans "Groups" %}</a>
             </li> -->
 {% block extra_tab %}
-    <li id="nav_nomoi" class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        {% trans "Διευθύνσεις" %}
-        <i class="caret"></i>
-      </a>
-      <ul class="dropdown-menu">
-        <li><a href="/groups/group/pe_irakleiou/?limit=100&offset=0">{% trans "ΠΕ Ηρακλείου" %}</a></li>
-        <li><a href="/groups/group/pe_chaniwn/?limit=100&offset=0">{% trans "ΠΕ Χανίων" %}</a></li>
-        <li><a href="/groups/group/pe_rethymnis/?limit=100&offset=0">{% trans "ΠΕ Ρεθύμνης" %}</a></li>
-        <li><a href="/groups/group/pe_lasithiou/?limit=100&offset=0">{% trans "ΠΕ Λασιθίου" %}</a></li>
-      </ul>
-   </li>
+          <li id="nav_nomoi" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            {% trans "Διευθύνσεις" %}
+            <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/groups/group/pe_irakleiou/?limit=100&offset=0">{% trans "ΠΕ Ηρακλείου" %}</a></li>
+              <li><a href="/groups/group/pe_chaniwn/?limit=100&offset=0">{% trans "ΠΕ Χανίων" %}</a></li>
+              <li><a href="/groups/group/pe_rethymnis/?limit=100&offset=0">{% trans "ΠΕ Ρεθύμνης" %}</a></li>
+              <li><a href="/groups/group/pe_lasithiou/?limit=100&offset=0">{% trans "ΠΕ Λασιθίου" %}</a></li>
+            </ul>
+          </li>
 
-   <li id="nav_polites" class="dropdown">
-     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-      {% trans "Πολίτες" %}
-      <i class="caret"></i>
-     </a>
-     <ul class="dropdown-menu">
-       <li><a href="{% url "new_map" %}">{% trans "Χάρτες" %}</a></li>
-     </ul>
-   </li>
-   <li id="nav_groups">
-     <a href="{% url "group_list" %}">{% trans "Ομάδες" %}</a>
-   </li>
-   <li id="nav_browse">
-     <a href="{% url "about" %}">{% trans "Σχετικά" %}</a>
-  </li>
+          <li id="nav_polites" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            {% trans "Πολίτες" %}
+            <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+          <li><a href="{% url "new_map" %}">{% trans "Χάρτες" %}</a></li>
+            </ul>
+          </li>
+          <li id="nav_groups">
+            <a href="{% url "group_list" %}">{% trans "Ομάδες" %}</a>
+          </li>
+          <li id="nav_browse">
+            <a href="{% url "about" %}">{% trans "Σχετικά" %}</a>
+            </li>
 {% endblock %}
 
             {% endblock %}
