@@ -86,7 +86,7 @@
               </div>
             </div>
           </form>
-         <ul class="nav navbar-nav navbar-right">
+        <!-- <ul class="nav navbar-nav navbar-right">
             {% if not user.is_authenticated and REGISTRATION_OPEN %}
             <li><a href="{% url "account_signup" %}">{% trans "Register" %}</a></li>
             {% endif %}
@@ -103,7 +103,7 @@
               </a>
             </li>
             {% endif %}
-          </ul>
+          </ul> -->
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -138,7 +138,6 @@
 			<div class="col-md-2">
 				<ul class="list-unstyled">
 				    <li>About</li>
-					<li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
 					<li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
 	                {% if perms.announcements.can_manage %}
 	                <li><a href="{% url "announcements_list" %}">{% trans "Announcements" %}</a></li>
