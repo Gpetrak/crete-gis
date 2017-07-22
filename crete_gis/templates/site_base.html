@@ -33,7 +33,14 @@
             </ul>
           </li>
           <li id="nav_maps">
-            <a href="{% url "maps_browse" %}">{% trans "Χάρτες" %}</a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              {% trans "Χάρτες" %}
+              <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url "maps_browse" %}">{% trans "Εξερεύνηση Χαρτών" %}</a></li>
+              <li><a href="{% url "new_map" %}">{% trans "WebGIS" %}</a></li>
+            </ul>
           </li>
         <!--    <li id="nav_people">
               <a href="{% url "profile_browse" %}">{% trans "People" %}</a>
@@ -69,7 +76,7 @@
             <i class="caret"></i>
             </a>
             <ul class="dropdown-menu">
-          <li><a href="{% url "new_map" %}">{% trans "Χάρτες" %}</a></li>
+          <li><a href="{% url "new_map" %}">{% trans "WebGIS" %}</a></li>
             </ul>
           </li>
           <li id="nav_groups">
