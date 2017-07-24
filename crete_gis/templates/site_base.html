@@ -33,7 +33,14 @@
             </ul>
           </li>
           <li id="nav_maps">
-            <a href="{% url "maps_browse" %}">{% trans "Χάρτες" %}</a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            {% trans "Χάρτες" %}
+            <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+               <li><a href="{% url "maps_browse" %}">{% trans "Εξερεύνηση Χαρτών" %}</a></li>
+               <li><a href="{% url "new_map" %}">{% trans "WebGIS" %}</a></li>
+            </ul>
           </li>
         <!--    <li id="nav_people">
               <a href="{% url "profile_browse" %}">{% trans "People" %}</a>
@@ -48,7 +55,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a href="">{% trans "Διεύθυνση Αναπτυξιακού Προγραμματισμού" %}</a></li>
-              <li><a href="">{% trans "Διεύθυνση Περιβάλλοντος και Χωρικού Σχεδιασμού" %}</a></li>
+              <li><a href="/layers/?limit=100&offset=0&keywords__slug__in=-_1">{% trans "Διεύθυνση Περιβάλλοντος και Χωρικού Σχεδιασμού" %}</a></li>
               <li><a href="/layers/?limit=100&offset=0&keywords__slug__in=-">{% trans "Διευθύνσεις Τεχνικών Έργων Περιφερειακών Ενοτήτων" %}</a></li>
               <li><a href="">{% trans "Διεύθυνση Διαφάνειας και Ηλεκτρονικής Διακυβέρνησης" %}</a></li>
               <li><a href="">{% trans "Διεύθυνση Εξυπηρέτησης του Πολίτη" %}</a></li>
@@ -69,7 +76,7 @@
             <i class="caret"></i>
             </a>
             <ul class="dropdown-menu">
-          <li><a href="{% url "new_map" %}">{% trans "Χάρτες" %}</a></li>
+          <li><a href="{% url "new_map" %}">{% trans "WebGIS" %}</a></li>
             </ul>
           </li>
           <li id="nav_groups">
@@ -96,7 +103,7 @@
               </div>
             </div>
           </form>
-        <!-- <ul class="nav navbar-nav navbar-right">
+         <ul class="nav navbar-nav navbar-right">
             {% if not user.is_authenticated and REGISTRATION_OPEN %}
             <li><a href="{% url "account_signup" %}">{% trans "Register" %}</a></li>
             {% endif %}
@@ -113,7 +120,7 @@
               </a>
             </li>
             {% endif %}
-          </ul> -->
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
