@@ -27,7 +27,7 @@
               <i class="caret"></i>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="{% url "layer_browse" %}">{% trans "Επιφάνειες" %}</a></li>
+              <li><a href="/layers/?limit=100&offset=0&type__in=vector">{% trans "Επιφάνειες" %}</a></li>
               <li><a href="{% url "document_browse" %}">{% trans "Έγγραφα" %}</a></li>
               <li><a href="/layers/?limit=100&offset=0&type__in=raster">{% trans "Δορυφορικές Εικόνες" %}</a></li>
             </ul>
