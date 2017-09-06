@@ -1,10 +1,8 @@
 .navbar-brand {
-    width: 149px;
-    height: 35px;
-    background: transparent  url(../img/crete_gis_logo.jpg) no-repeat;
+    background: transparent  url(../img/crete_gis_logo_trans.png) no-repeat;
 }
 
-.jumbotron {
+.home .jumbotron {
     background: #e5e5e5 none repeat scroll 0 0;
 }
 #wrap {
@@ -18,7 +16,4 @@ footer {
     padding-top: 2em;
 }
 
-.navbar-inverse {   
-    background: #000000;
-}
 
