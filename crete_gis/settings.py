@@ -59,4 +59,9 @@ LOCALE_PATHS = (
     os.path.join(LOCAL_ROOT, 'locale'),
     ) + LOCALE_PATHS
 
+CRETE_GIS_APPS = (
+                 'crete_gis.in_or_out',
+                 )
+
+INSTALLED_APPS = INSTALLED_APPS + CRETE_GIS_APPS
 DEBUG = False
