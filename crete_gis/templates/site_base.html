@@ -85,8 +85,15 @@
             <a href="{% url "group_list" %}">{% trans "Ομάδες" %}</a>
           </li>
           <li id="nav_browse">
-            <a href="{% url "about" %}">{% trans "Σχετικά" %}</a>
-            </li>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            {% trans "Σχετικά" %}
+            <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+               <li><a href="{% url "about" %}">{% trans "Σχετικά με το έργο" %}</a></a></li>
+               <li><a href="/suggest/">{% trans "Προτάσεις" %}</a></li>
+            </ul>
+          </li>
 {% endblock %}
 
             {% endblock %}
