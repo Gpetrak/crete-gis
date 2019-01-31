@@ -66,4 +66,4 @@ CRETE_GIS_APPS = (
                  )
 
 INSTALLED_APPS = INSTALLED_APPS + CRETE_GIS_APPS
-DEBUG = True
+DEBUG = False
