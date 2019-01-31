@@ -62,6 +62,7 @@ LOCALE_PATHS = (
 CRETE_GIS_APPS = (
                  'crete_gis.in_or_out',
                  'crete_gis.e_urban',
+                 'crete_gis.suggest',
                  )
 
 INSTALLED_APPS = INSTALLED_APPS + CRETE_GIS_APPS

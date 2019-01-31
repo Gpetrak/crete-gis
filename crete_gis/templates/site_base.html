@@ -70,23 +70,30 @@
             </ul>
           </li>
 
-          <li id="nav_polites" class="dropdown">
+          <li id="nav_apps" class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            {% trans "Πολίτες" %}
+            {% trans "Εφαρμογές" %}
             <i class="caret"></i>
             </a>
             <ul class="dropdown-menu">
           <li><a href="{% url "new_map" %}">{% trans "WebGIS" %}</a></li>
           <li><a href="/in_or_out/">{% trans "Εντός ή Εκτός" %}</a></li>
-          <li><a href="/e_urban/">{% trans "e-Πολεοδομία" %}</a></li>  
+          <li><a href="/e_urban/">{% trans "e-Urban" %}</a></li>  
             </ul>
           </li>
           <li id="nav_groups">
             <a href="{% url "group_list" %}">{% trans "Ομάδες" %}</a>
           </li>
           <li id="nav_browse">
-            <a href="{% url "about" %}">{% trans "Σχετικά" %}</a>
-            </li>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            {% trans "Σχετικά" %}
+            <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+               <li><a href="{% url "about" %}">{% trans "Σχετικά με το έργο" %}</a></a></li>
+               <li><a href="/suggest/">{% trans "Προτάσεις" %}</a></li>
+            </ul>
+          </li>
 {% endblock %}
 
             {% endblock %}
