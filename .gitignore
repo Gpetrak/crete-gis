@@ -2,4 +2,5 @@
 *.pyc
 # Temporary files
 *.swp
-~     
+
+crete_gis/static/pdf/*     
