@@ -3,4 +3,5 @@
 # Temporary files
 *.swp
 
-crete_gis/static/pdf/*     
+crete_gis/static/pdf/*
+crete_gis/static/files/*     
