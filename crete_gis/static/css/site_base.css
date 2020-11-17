@@ -1,7 +1,7 @@
 .navbar-brand {
-    width: 149px;
-    height: 35px;
-    background: transparent  url(../img/crete_gis_logo.jpg) no-repeat;
+    background: url(../img/crete_logo_0.png) no-repeat;
+    height: 70px;
+    line-height: 80px;
 }
 
 .jumbotron {
