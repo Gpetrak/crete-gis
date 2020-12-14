@@ -1,7 +1,6 @@
 .navbar-brand {
-    background: url(../img/crete_logo_0.png) no-repeat;
-    height: 70px;
-    line-height: 80px;
+    background: url(../img/crete_logo_1.png) no-repeat;
+    height: 35px;
 }
 
 .jumbotron {
@@ -19,7 +18,8 @@ footer {
 }
 
 .navbar-inverse {   
-    background: #000000;
+    background: #F8F8F8;
 }
+
 
 a:link {color: #333;} 
