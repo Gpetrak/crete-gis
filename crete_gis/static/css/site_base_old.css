@@ -1,0 +1,25 @@
+.navbar-brand {
+    background: url(../img/crete_logo_0.png) no-repeat;
+    height: 70px;
+    line-height: 80px;
+}
+
+.jumbotron {
+    background: #e5e5e5 none repeat scroll 0 0;
+}
+#wrap {
+    background: #fff none repeat scroll 0 0;
+}
+
+footer {
+    background: #333 none repeat scroll 0 0;
+    color: #fff;
+    padding-bottom: 3em;
+    padding-top: 2em;
+}
+
+.navbar-inverse {   
+    background: #000000;
+}
+
+a:link {color: #333;} 

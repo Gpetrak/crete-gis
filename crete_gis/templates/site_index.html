@@ -1,120 +1,106 @@
-{% extends 'index.html' %}
-{% load base_tags %}
+{% extends "site_base.html" %}
 {% load i18n %}
-<title>{% block title %}Crete-GIS{% endblock %}</title>
-{% comment %}
-This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs. 
-{% endcomment %}
-  {% block hero %} 
-  <div class="jumbotron">
-  <div class="container">
-  <h1><font color="#666666">Crete-GIS</font></h1>
-    <!-- Carousel
-  ================================================== -->
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img class="first-slide" src="../static/img/carousel_3.jpg" alt="" style=" width:100%; height: 400px;">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Καλωσήρθατε στο <strong>Crete-GIS Project</strong></h1>
-            <p class="lead"><strong>Τo Crete-GIS είναι ένα GeoPortal γεωχωρικών δεδομένων που αφορά την περιοχή της Κρήτης.</strong></p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <img class="second-slide" src="../static/img/carousel_2.jpg" alt="" style=" width:100%; height: 400px;">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Γεωχωρικά Δεδομένα</h1>
-            <p class="lead"><strong>Σκοπός του είναι ο διαμοιρασμός και η ελεύθερη πρόσβαση γεωχωρικών και γεωγραφικών δεδομένων για τους πολίτες και τους κυβερνητικούς φορείς</strong></p>
-            <a class="btn btn-danger" href="/layers/">Explore Layers</a>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <img class="third-slide" src="../static/img/carousel_4.jpg" alt="" style=" width:100%; height: 400px;">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Δημιουργήστε Χάρτες </h1>
-            <p class="lead"><strong>Πλοηγηθείτε και αναζητήστε γεωχωρικά δεδομένα.<br>Δημιουργήστε και εκτυπώστε τους δικούς σας χάρτες.</strong></p>
-            <a class="btn btn-danger" href="/maps/new">Create a map</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div><!-- /.carousel -->  
-  </div>
- </div>
+{% load staticfiles %}
+{% load base_tags %}
+
+{% block title %} {{ block.super }} {% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block middle %}
+   {{ block.super }}
+  {% block hero %}
   {% endblock %}
 
- {% block mainbody %}
-        <div class="container">
+  {% block mainbody %}
+  <body style='position: relative;'>
+  <meta name="author" content="George Petrakis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="../static/css/base2.css"> -->
+  <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+  <script type="text/javascript" src="//use.typekit.net/rws3een.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <div class="background"></div>
+    <section id="intro" class="wrapper">
+      <h1 class="name">Crete - GIS</h1>
+      <h2 class="byline">Το GIS της Περιφερειας Κρητης</h2>
+    </section>
+    <section id="explosion" class="wrapper">
+    <img id="crete_squares" class="raw-page" src="../static/img/crete_squares.png">
+      <p class="explosion-byline">Τo Crete-GIS είναι ένα οικοσύστημα εφαρμογών της Περιφέρειας Κρήτης με αντικείμενο τη γεωχωρική πληροφορία</p>
+      <ul id="domExplosionList">
+        <li class="dom-explosion-item dei-1"></li>
+        <li class="dom-explosion-item dei-2"></li>
+        <li class="dom-explosion-item dei-3"></li>
+        <li class="dom-explosion-item dei-4"></li>
+        <li class="dom-explosion-item dei-5"></li>
+        <li class="dom-explosion-item dei-6"></li>
+        <li class="dom-explosion-item dei-7"></li>
+        <li class="dom-explosion-item dei-8"></li>
+        <li class="dom-explosion-item dei-9"></li>
+        <li class="dom-explosion-item dei-10"></li>
+        <li class="dom-explosion-item dei-11"></li>
+        <li class="dom-explosion-item dei-12"></li>
+        <li class="dom-explosion-item dei-13"></li>
+        <li class="dom-explosion-item dei-14"></li>
+        <li class="dom-explosion-item dei-15"></li>
+        <li class="dom-explosion-item dei-16"></li>
+      </ul>
+    </section>
+    <section id="data" class="wrapper">
+    <img id="crete_data" class="raw-page" src="../static/img/crete_data.png">
+      <p class="data-byline">Μπορείτε να αναζητήσετε, να ανακτήσετε, να μελετήσετε και να κατεβάσετε γεωχωρικά δεδομένα που αφορούν το περιβάλλον, τη γεωργία, την κατασκευή, την υγεία κ.α <br>
+      <a class="btn" style="color:#fff;" ref="http://senselab.tucserv.tuc.gr/layers/?limit=100&offset=0&type__in=vector" target=_blank>ΕΙΣΟΔΟΣ</a></p>
+    </section>
+    <section id="sat_repo" class="wrapper">
+    <img id="sat_data" class="raw-page" src="../static/img/sat_data2.png">
+      <p class="sat-data-byline">Το Crete - GIS φιλοδοξεί να ενσωματώσει αποθετήριο δορυφορικών εικόνων παρέχοντας γνώση για την ανάπτυξη της οικονομίας του νησιού (πχ ποιότητα των καλλιεργιών). <br>
+     <a class="btn" style="color:#fff;" href="http://senselab.tucserv.tuc.gr/layers/?limit=100&offset=0&type__in=raster" target=_blank>ΕΙΣΟΔΟΣ</a></p>
+    </section>
+    <section id="webgis" class="wrapper">
+    <img id="maps" class="raw-page" src="../static/img/maps2.png">
+      <p class="maps-byline">Περιλαμβάνονται δυνατότητες ανάλυσης δεδομένων, δημιουργίας και εκτύπωσης χαρτών <br>
+    <a class="btn" style="color:#fff;" href="http://senselab.tucserv.tuc.gr/maps/new" target=_blank>ΕΙΣΟΔΟΣ</a></p>
+    </section>
+    <section id="web_app1" class="wrapper">
+    <img id="e_urban" class="raw-page" src="../static/img/e-urban.png">
+      <p class="web_app1_byline">Εφαρμογή e-Urban: Δίνει την δυνατότητα στους χρήστες να θέσουν ερωτήματα και να ενημερωθoύν για χωροταξικά θέματα. <br>
+    <a class="btn" style="color:#fff;" href="http://senselab.tucserv.tuc.gr/e_urban/e_urban_map/" target=_blank>ΕΙΣΟΔΟΣ</a></p>
+    </section>
+     <section id="web_app2" class="wrapper">
+    <img id="in_or_out" class="raw-page" src="../static/img/in_or_out.png">
+      <p class="web_app2_byline">Εφαρμογή Εντός - Εκτός: Με ένα απλό κλικ στο σημείο ενδιαφέροντος, η εφαρμογή Εντός-Εκτός, ενημερώνει τους πολίτες για τις επιφάνειες (πχ περιοχές Natura, όρια οικισμών) που το σημείο αυτό βρίσκεται εντός εμφανίζοντας ταυτόχρονα τα κοντινότερα στοιχεία των περιοχών που βρίσκεται εκτός.<br>
+      <a class="btn" style="color:#fff;" href="http://senselab.tucserv.tuc.gr/in_or_out/" target=_blank>ΕΙΣΟΔΟΣ</a></p>
+    </section>
+    <section id="images" class="wrapper">
+      <p class="images-byline">Εφαρμογή e-Road: Μία εφαρμογή για την καταγραφή προβλημάτων του οδικού δικτύου, την ενημέρωση για τις μερεωρολογικές συνθήκες και την παρακολούθηση της ποιότητας του αέρα ανάλογα με τη γεωγραφική θέση του χρήστη</p>
+      <!-- <p class="images-byline-2">Really, anything is possible &hellip;</p> -->
+      <img id="mediumHomepage" class="raw-page" src="../static/img/e_road_1.png">
+      <div class="iphone">
+        <img class="iphone-frame" src="../static/img/iphoneframe.png">
+        <div class="iphone-viewport">
+          <img id="medium-profile-iphone" class="iphone-content" src="../static/img/e_road2.png">
+        </div>
+      </div>
+    </section>
+    <section id="links" class="wrapper">
+       <!-- <h3 class="links-byline">Κατηγορίες Δεδομένων</h3> --> 
+       <div class="container">
                 <div class="row">
                         <div class="container text-center">
                                 <div class="col-xs-4 col-sm-2">
-                                        <a href="/search/?limit=100&offset=0&category__identifier__in=boundaries&category__identifier__in=planningCadastre" data-toggle="tooltip" data-placement="auto"
-                                                title="Political and administrative boundaries. Land use maps, zoning maps, cadastral surveys, land ownership.">
-    <div class="category">
-                                                        <i class="fa fa-flag fa-4x"></i>
-                                                        <h4>Όρια</h4>
-                                                </div>
-                                        </a>
-                                </div>
-                                <div class="col-xs-4 col-sm-2">
-                                        <a href="/search/?limit=100&offset=0&category__identifier__in=structure&category__identifier__in=intelligenceMilitary&category__identifier__in=utilitiesCommunication" data-toggle="tooltip" data-placement="auto"
-                                  title="Buildings, museums, churches, factories, housing, monuments, shops, towers. Energy, water and waste systems and communications infrastructure and services. Military bases, structures, activities." >
-                                                <div class="category">
-                                                        <i class="fa fa-home fa-4x"></i>
-                                                        <h4>Κατασκευές</h4>
-                                                </div>
-                                        </a>
-                                </div>
-                                 <div class="col-xs-4 col-sm-2">
-                                        <a href="/search/?limit=100&offset=0&category__identifier__in=climatologyMeteorologyAtmosphere" data-toggle="tooltip" data-placement="auto"
-                                                title="Cloud cover, weather, climate, atmospheric conditions, climate change, precipitation" >
-                                                <div class="category">
-                                                        <i class="fa fa-umbrella fa-4x"></i>
-                                                        <h4>Κλίμα</h4>
-                                                </div>
- </a>
-                                </div>
-                                <div class="col-xs-4 col-sm-2">
-                                        <a href="/search/?limit=100&offset=0&category__identifier__in=elevation" data-toggle="tooltip" data-placement="auto"
-                                                title="Altitude, bathymetry, digital elevation models, slope, derived products" >
-                                                <div class="category">
-                                                        <i class="fa fa-level-up fa-4x"></i>
-
-                                                        <h4>Υψόμετρο</h4>
-                                                </div>
-                                        </a>
-                                </div>
-                                <div class="col-xs-4 col-sm-2">
-                                        <a href="/search/?limit=100&offset=0&category__identifier__in=geoscientificInformation" data-toggle="tooltip" data-placement="auto"
-                                         title="Geophysical features and processes, geology, minerals, sciences dealing with the composition, structure and origin of the earth s rocks, risks of earthquakes, volcanic activity, landslides, gravity information, soils, permafrost, hydrogeology, erosion." >
-                                                <div class="category">
-                                                        <i class="fa fa-globe fa-4x"></i>
-                                                        <h4>Γεωλογία</h4>
+                                        <a href="/search/?limit=100&offset=0&category__identifier__in=biota&category__identifier__in=farming&category__identifier__in=environment" data-toggle="tooltip" data-placement="auto"
+                                                title="Wildlife, vegetation, biological sciences, ecology, wilderness, sealife, wetlands, habitat. Environmental resources, protection and conservation. Agriculture, irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and livestock" style='color: #fff' >
+<div class="category">
+                                                        <i class="fa fa-leaf fa-4x"></i>
+                                                        <h4>Περιβάλλον</h4>
                                                 </div>
                                         </a>
                                 </div>
                                 <div class="col-xs-4 col-sm-2">
                                         <a href="/search/?limit=100&offset=0&category__identifier__in=health" data-toggle="tooltip" data-placement="auto"
-                                                title="Health, health services, human ecology, and safety." >
+                                                title="Health, health services, human ecology, and safety." style='color: #fff'>
                                                 <div class="category">
                                                         <i class="fa fa-medkit fa-4x"></i>
                                                         <h4>Υγεία</h4>
@@ -122,44 +108,8 @@ This is where you can override the hero area block. You can simply modify the co
                                         </a>
                                 </div>
                                 <div class="col-xs-4 col-sm-2">
-                                        <a href="/search/?limit=100&offset=0&category__identifier__in=imageryBaseMapsEarthCover" data-toggle="tooltip" data-placement="auto"
-                                                title="Land cover, topographic maps, imagery, unclassified images, annotations." >
-                                                <div class="category">
-                                                        <i class="fa fa-tree fa-4x"></i>
-                                                        <h4>Κάλυψη Γης</h4>
-                                                </div>
-                                        </a>
-                                </div>
-                                 <div class="col-xs-4 col-sm-2">
-                                        <a href="/search/?limit=100&offset=0&category__identifier__in=biota&category__identifier__in=farming&category__identifier__in=environment" data-toggle="tooltip" data-placement="auto"
-                                                title="Wildlife, vegetation, biological sciences, ecology, wilderness, sealife, wetlands, habitat. Environmental resources, protection and conservation. Agriculture, irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and livestock" >
-<div class="category">
-                                                        <i class="fa fa-leaf fa-4x"></i>
-                                                        <h4>Φύση</h4>
-                                                </div>
-                                        </a>
-                                </div>
-                                <div class="col-xs-4 col-sm-2">
-                                        <a href="/search/?limit=100&offset=0&category__identifier__in=location" data-toggle="tooltip" data-placement="auto"
-                                                title="Addresses, geodetic networks, control points, postal zones and services, place names" >
-                                                <div class="category">
-                                                        <i class="fa fa-map-marker fa-4x"></i>
-                                                        <h4>Γεωγραφική Θέση</h4>
-                                                </div>
-                                        </a>
-                                </div>
-                                <div class="col-xs-4 col-sm-2">
-                                        <a href="/search/?limit=100&offset=0&category__identifier__in=economy&category__identifier__in=society" data-toggle="tooltip" data-placement="auto"
-                                                title="Settlements, anthropology, archaeology, education, traditional beliefs, demographic data, crime and justice, census information. Economic activities, conditions and employment." >
-                                                <div class="category">
-                                                        <i class="fa fa-male fa-4x"></i>
-                                                        <h4>Πληθυσμός</h4>
-                                                </div>
-                                        </a>
-                                </div>
-                                <div class="col-xs-4 col-sm-2">
                                         <a href="/search/?limit=100&offset=0&category__identifier__in=transportation" data-toggle="tooltip" data-placement="auto"
-                                                title="Roads, airports/airstrips, shipping routes, tunnels, nautical charts, vehicle or vessel location, aeronautical charts, railways." >
+                                                title="Roads, airports/airstrips, shipping routes, tunnels, nautical charts, vehicle or vessel location, aeronautical charts, railways." style='color: #fff'>
                                                 <div class="category">
                                                         <i class="fa fa-road fa-4x"></i>
                                                         <h4>Μεταφορές</h4>
@@ -167,15 +117,116 @@ This is where you can override the hero area block. You can simply modify the co
                                         </a>
                                 </div>
                                 <div class="col-xs-4 col-sm-2">
+                                        <a href="/search/?limit=100&offset=0&category__identifier__in=structure&category__identifier__in=intelligenceMilitary&category__identifier__in=utilitiesCommunication" data-toggle="tooltip" data-placement="auto" 
+                                  title="Buildings, museums, churches, factories, housing, monuments, shops, towers. Energy, water and waste systems and communications infrastructure and services. Military bases, structures, activities." style='color: #fff'>
+                                                <div class="category">
+                                                        <i class="fa fa-home fa-4x"></i>
+                                                        <h4>Κατασκευές</h4>
+                                                </div>
+                                        </a>
+                                </div>
+                             <div class="col-xs-4 col-sm-2">
+                                        <a href="/search/?limit=100&offset=0&category__identifier__in=geoscientificInformation" data-toggle="tooltip" data-placement="auto"
+                                         title="Geophysical features and processes, geology, minerals, sciences dealing with the composition, structure and origin of the earth s rocks, risks of earthquakes, volcanic activity, landslides, gravity information, soils, permafrost, hydrogeology, erosion." style='color: #fff'>
+                                                <div class="category">
+                                                        <i class="fa fa-globe fa-4x"></i>
+                                                        <h4>Γεωλογία</h4>
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="col-xs-4 col-sm-2">
                                         <a href="/search/?limit=100&offset=0&category__identifier__in=inlandWaters&category__identifier__in=oceans" data-toggle="tooltip" data-placement="auto"
-                                                title="Rivers and glaciers, salt lakes, water utilization plans, dams, currents, floods. Water quality, hydrographic charts, tides, tidal waves, coastal information, reefs." >
+                                                title="Rivers and glaciers, salt lakes, water utilization plans, dams, currents, floods. Water quality, hydrographic charts, tides, tidal waves, coastal information, reefs." style='color: #fff'>
                                                 <div class="category">
                                                    <i class="fa fa-tint fa-4x"></i>
-                                                        <h4>Νερό</h4>
+                                                        <h4>Διαχείριση Υδάτων</h4>
                                                 </div>
                                         </a>
                                 </div>
                         </div>
                 </div>
         </div>
+</div>
+<h3 class="error">Whoops! Right now this demo doesn't handle resizing or browsers less than 1000px wide. Reload this page or get on a laptop!</h3>
+<script src="../static/js/jquery-2.0.2.min.js"></script>
+<script src="../static/js/picasso.js"></script> 
+
   {% endblock %}
+</body>  
+{% endblock %}
+
+{% block extra_script %}
+
+{% endblock extra_script %}
+{% block footer %}
+<footer style='position:absolute; bottom: 0; width: 100%;'>
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-2">
+                                <ul class="list-unstyled">
+                                    <li>Data</li>
+                        <li><a href="{% url "layer_browse" %}" style='color:#fff;'>{% trans "Layers" %}</a></li>
+                        <li><a href="{% url "document_browse" %} " style='color:#fff;'>{% trans "Documents" %}</a></li>
+                                    {% if user.is_authenticated %}
+                        <li><a href="{% url "services" %}" style='color:#fff;'>{% trans "Remote Services" %}</a></li>
+                        <li><a href="/layers/upload" style='color:#fff;'>Upload Layer</a></li>
+                        <li><a href="/documents/upload/" style='color:#fff;'>Upload Document</a></li>
+                        <li><a href="/services/register/" style='color:#fff;'>{% trans "Add Remote Services" %}</a></li>
+                                    {% endif %}
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                                <ul class="list-unstyled">
+                                    <li>Maps</li>
+                    <li><a href="{% url "maps_browse" %}" style='color:#fff;'>{% trans "Explore" %}</a></li>
+                                        {% if user.is_authenticated %}
+                                        <li><a href="#" style='color:#fff;'>{% trans "Create Map" %}</a></li>
+                                        {% endif %}
+                                </ul>
+                        </div>
+                        <div class="col-md-2">
+                                <ul class="list-unstyled">
+                                    <li>About</li>
+                                        <li><a href="{% url "group_list" %}" style='color:#fff;'>{% trans "Groups" %}</a></li>
+                        {% if perms.announcements.can_manage %}
+                        <li><a href="{% url "announcements_list" %}" style='color:#fff;'>{% trans "Announcements" %}</a></li>
+                        {% endif %}
+                                        {% if user.is_superuser %}
+                                    <li role="separator" class="divider"></li>
+                                        <li><a href="/admin/people/profile/add/" style='color:#fff;'>{% trans "Add User" %}</a></li>
+                                        <li><a href="{% url "account_invite_user" %}" style='color:#fff;'>{% trans "Invite User" %}</a></li>
+                                        <li><a href="/groups/create/" style='color:#fff;'>{% trans "Create Group" %}</a></li>
+                                        {% endif %}
+                                </ul>
+                        </div>
+                        <div class="col-md-2">
+                          <img src="{{ SITEURL }}/static/img/perifereia_logo.jpg" class="img-thumbnail" alt="perifereia_kritis" width="259" height="68">
+
+                          </div>
+                        <div class="col-md-4 text-right">
+                                <p><img src="{{ SITEURL }}/static/img/senselab_trans_logo.png"></p>
+                                <ul class="list-unstyled">
+                                        <li>SenseLab Team</li>
+                                        <li><a href="http://senselab.tuc.gr" style='color:#fff;'>senselab.tuc.gr</a></li>
+                                        <li>Powered by GeoNode</li>
+                                </ul>
+        <label class="hidden">{% trans "Language" %}</label>
+                    {% if csrf_token != "NOTPROVIDED" %}
+                    {% get_current_language as LANGUAGE %}
+                    <form class="form-inline" action="/i18n/setlang/" method="post">
+                    {% csrf_token %}
+                      <select class="select-language" name="language" onchange="javascript:form.submit()">
+                        {% for lang in LANGUAGES %}
+                        <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+                          {{ lang.1 }}
+                        </option>
+                        {% endfor %}
+                      </select>
+                    </form>
+                    {% endif %}
+                        </div>
+                </div>
+        </div>
+</footer>
+{% endblock footer %}
+
