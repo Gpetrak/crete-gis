@@ -331,12 +331,13 @@ body {
   top: 30%;
   left: 10%;
 }
+/*
 .page-error .error {
   display: block;
 }
 .page-error .container {
   display: none;
-}
+} 
 @media all and (max-width: 1000px) {
   .container {
     display: none;
@@ -345,4 +346,5 @@ body {
     display: block;
     font-size: 22px;
   }
+*/
 }
