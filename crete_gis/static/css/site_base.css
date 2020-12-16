@@ -21,5 +21,21 @@ footer {
     background: #F8F8F8;
 }
 
+.navbar-inverse .navbar-nav>li>a {
+ color:#000;
+}
 
-a:link {color: #333;} 
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:hover,
+.navbar-inverse .navbar-nav>.open>a:focus {
+ background-color:#D8D8D8;
+ color:#000
+}
+
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+ color:#000;
+ background-color:transparent
+}
+
+a:link {color: #000;} 
